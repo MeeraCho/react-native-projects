@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar style="light" />
+      {/* <StatusBar style="light" />
       <View style={styles.appContainer}>
         <Button
           title="Add New Goal" 
@@ -63,7 +63,7 @@ export default function App() {
             alwaysBounceVertical={false}
           />
         </View>
-      </View>
+      </View> */}
     </>
   );
 }
