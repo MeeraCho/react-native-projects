@@ -1,27 +1,22 @@
-// Import the functions you need from the SDKs you need
+// type 'npm install firebase' in the terminal to add firebase SDK
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDXpvc-bHJwaLPyVyRULlppWYJ8RqrdMLY",
-    authDomain: "ameya-aqi.firebaseapp.com",
-    databaseURL: "https://ameya-aqi-default-rtdb.firebaseio.com",
-    projectId: "ameya-aqi",
-    storageBucket: "ameya-aqi.firebasestorage.app",
-    messagingSenderId: "263938714691",
-    appId: "1:263938714691:web:e7b1ced1d911b41f5eb8f6"
+    apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.EXPO_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
 };
 
+
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-const app = getApp().length === 0 ? initializeApp(firebaseConfig) : getApp();
+// const app = getApp().length === 0 ? initializeApp(firebaseConfig) : getApp();
+const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 export { db };
-
-
-
-

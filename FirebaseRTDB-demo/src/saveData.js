@@ -4,7 +4,7 @@ import { db } from '../config';
 import { ref, set } from 'firebase/database';
 
 
-const AddData = () => {
+const SaveData = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
 
@@ -41,11 +41,11 @@ const AddData = () => {
     );
 }
 
-export default AddData
+export default SaveData
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: '#fff',
     },
     header: {

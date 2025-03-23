@@ -1,10 +1,12 @@
 import { StyleSheet, View } from 'react-native';
-import AddData from './src';
+import SaveData from './src/saveData';
+import FetchData from './src/fetchData';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AddData />
+      <SaveData />
+      <FetchData />
     </View>
   );
 }
